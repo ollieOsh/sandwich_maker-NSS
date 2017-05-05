@@ -9,17 +9,8 @@ var SandwichMaker = (function(maker) {
   	};
 console.log("bread loaded");
   // Augment the original object with another method
-  maker.addBread = function() {
-    let totalPrice = 0;
- 	  for(prop in breadPrices) {
-   		if(document.getElementById(prop).checked) {
-   			console.log(breadPrices[prop]);
-        totalPrice += breadPrices[prop];
-        SandwichMaker.addTopping(totalPrice);
-   		}
-   	}
-  console.log("bread total", totalPrice);
- 	// return totalPrice;
+  maker.addBread = function(bread) {
+    return breadPrices[bread];
   };
 
   // Return the new, augmented object with the new method on it
