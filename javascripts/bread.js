@@ -3,9 +3,9 @@ var SandwichMaker = (function(maker) {
 
   // Private variable to store the different meat prices
   var breadPrices = {
-  	"herbs": 1.50,
-  	"white": 1.00,
-  	"wheat": 1.25
+  	"herbs": 2.50,
+  	"white": 2.00,
+  	"wheat": 2.25
   	};
 console.log("bread loaded");
   // Augment the original object with another method
