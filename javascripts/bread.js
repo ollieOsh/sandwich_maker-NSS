@@ -12,14 +12,13 @@ console.log("bread loaded");
   maker.addBread = function() {
     let totalPrice = 0;
  	  for(prop in breadPrices) {
-      //totalPrice = 0;
    		if(document.getElementById(prop).checked) {
    			console.log(breadPrices[prop]);
         totalPrice += breadPrices[prop];
-        SandwichMaker.addTopping(breadPrices[prop])
+        SandwichMaker.addTopping(totalPrice);
    		}
    	}
-  console.log("total", totalPrice);
+  console.log("bread total", totalPrice);
  	// return totalPrice;
   };
 

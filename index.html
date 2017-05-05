@@ -6,7 +6,9 @@
 <body>
 	<h1>Pick Yo' Stuff!</h1>
 	<form>
-		<section id="bread-chooser">
+		<fieldset id="bread-chooser">
+			<legend>Pick Yo' Bread:</legend>
+
 			<input type=checkbox name="bread" value="herbs" id="herbs">
 			<label for="herbs">Italian Herbs &amp; Cheese</label><br>
 
@@ -15,25 +17,29 @@
 
 			<input type=checkbox name="bread" value="wheat" id="wheat">
 			<label for="wheat">Wheat</label><br>
-		</section>
+		</fieldset>
 		<br>
 
-		<section id="meat-chooser">
+		<fieldset id="meat-chooser">
+			<legend>Pick Yo' Meat:</legend>
+
 			<input type=checkbox name="meat" value="ham" id="ham">
 			<label for="ham">Ham</label><br>
 
 			<input type=checkbox name="meat" value="turkey" id="turkey">
 			<label for="turkey">Turkey</label><br>
 
-			<input type=checkbox name="meat" value="beef" id="roast-beef">
+			<input type=checkbox name="meat" value="roast-beef" id="roast-beef">
 			<label for="roast-beef">Roast Beef</label><br>
 
 			<input type=checkbox name="meat" value="bacon" id="bacon">
 			<label for="bacon">Bacon</label><br>
-		</section>
+		</fieldset>
 		<br>
 
-		<section id="cheese-chooser">
+		<fieldset id="cheese-chooser">
+			<legend>Pick Yo' Cheese:</legend>
+
 			<input type=checkbox name="cheese" value="american" id="american">
 			<label for="american">American</label><br>
 
@@ -48,10 +54,12 @@
 
 			<input type=checkbox name="cheese" value="asiago" id="asiago">
 			<label for="asiago">Asiago</label><br>
-		</section>
+		</fieldset>
 		<br>
 
-		<section id="condiments-chooser">
+		<fieldset id="condiments-chooser">
+			<legend>Pick Yo' Condiments:</legend>
+
 			<input type=checkbox name="condiments" value="mayo" id="mayo">
 			<label for="mayo">Mayonnaise</label><br>
 
@@ -63,10 +71,12 @@
 
 			<input type=checkbox name="condiments" value="sriracha" id="sriracha">
 			<label for="sriracha">Sriracha</label><br>
-		</section>
+		</fieldset>
 		<br>
 
-		<section id="veggies-chooser">
+		<fieldset id="veggies-chooser">
+			<legend>Pick Yo' Veggies:</legend>
+
 			<input type=checkbox name="veggies" value="lettuce" id="lettuce">
 			<label for="lettuce">Lettuce</label><br>
 
@@ -90,13 +100,16 @@
 
 			<input type=checkbox name="veggies" value="olives" id="olives">
 			<label for="olives">Olives</label><br>
-		</section>
+		</fieldset>
 		<br><br>
 
 		<button id="btn">Place Yo' Order!</button>
 	</form>
 
-	<h3 id="finished-order"></h3>
+	<div id="finished-order">
+		<h3 id="bread-order"></h3>
+		<h3 id="meat-order"></h3>
+	</div>
 
 	<script type="text/javascript" src="javascripts/SandwichMaker.js"></script>
 	<script type="text/javascript" src="javascripts/bread.js"></script>

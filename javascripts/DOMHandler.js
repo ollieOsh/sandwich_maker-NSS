@@ -16,35 +16,66 @@ var meatChooser = document.getElementById("meat-chooser"),
   A <select> element broadcasts a change event, so you listen for it
   and get the value of the topping from your augmented IIFE
 */
+
 breadChooser.addEventListener("change", function(event) {
   selectedTopping = event.target.value;
   console.log("bready");
   let selTop = document.getElementById(selectedTopping);
   let label = document.querySelector('label[for=' + selectedTopping + ']').innerHTML;
+  let breadOrder = document.getElementById("bread-order");
 
-  if(finishedOrder.innerHTML.indexOf("Bread: ") === -1){
-    finishedOrder.innerHTML += "Bread: "
+  if(breadChooser.querySelectorAll(':checked').length == 0) {
+    breadOrder.innerHTML += 'None ';
+  }else {
+    breadOrder.innerHTML = breadOrder.innerHTML.replace('None ', '');
   }
 
-  if(selTop.checked && (finishedOrder.innerHTML.indexOf(label) === -1)){
-    finishedOrder.innerHTML += label + ' ';
+  if(breadOrder.innerHTML.indexOf("Bread: ") === -1){
+    breadOrder.innerHTML += "Bread: "
+  }
+
+  if(selTop.checked && (breadOrder.innerHTML.indexOf(label) === -1)){
+    breadOrder.innerHTML += label + ' ';
   } else if(!(selTop.checked)) {
-    finishedOrder.innerHTML = finishedOrder.innerHTML.replace(label, '');
+    breadOrder.innerHTML = breadOrder.innerHTML.replace(label, '');
   }
+
+
   SandwichMaker.addBread();
 });
 
-finishedOrder.innerHTML += '<br>'
 
-// meatChooser.addEventListener("change", function(event) {
-//   // Get the value chosen from the DOM
-//   selectedTopping = event.target.value;
+meatChooser.addEventListener("change", function(event) {
+  // Get the value chosen from the DOM
+  selectedTopping = event.target.value;
 
-//   // Determine the price of the topping chosen
-//   console.log("hi");
-//   SandwichMaker.addMeat();
+  // Determine the price of the topping chosen
+  console.log("hi");
+  let selTop = document.getElementById(selectedTopping);
+  let label = document.querySelector('label[for=' + selectedTopping + ']').innerHTML;
+    let meatOrder = document.getElementById('meat-order');
 
-//   // Add the topping to the SandwichMaker to increase the total price
-// });
+  if(meatOrder.innerHTML.indexOf("Meat: ") === -1){
+    meatOrder.innerHTML += `Meat: `;
+    console.log(meatOrder);
+  }
+
+
+
+  if(selTop.checked && (meatOrder.innerHTML.indexOf(label) === -1)){
+    meatOrder.innerHTML += label + ' ';
+    console.log("section value ", meatChooser)
+  } else if(!(selTop.checked)) {
+    meatOrder.innerHTML = meatOrder.innerHTML.replace(label, '');
+  }
+
+  if(meatChooser.querySelectorAll(':checked').length == 0) {
+    meatOrder.innerHTML += 'None';
+  }
+
+  SandwichMaker.addMeat();
+
+  // Add the topping to the SandwichMaker to increase the total price
+});
 
 //SandwichMaker.addTopping();
