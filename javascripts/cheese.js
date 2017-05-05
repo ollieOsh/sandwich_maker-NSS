@@ -4,10 +4,10 @@ var SandwichMaker = (function(maker) {
   // Private variable to store the different meat prices
   var cheesePrices = {
   	"american": .5,
-  	"swiss": 1.5,
-  	"provolone": 2.5,
-  	"cheddar": 3.5,
-  	"asiago": 4.5
+  	"swiss": .5,
+  	"provolone": .5,
+  	"cheddar": .5,
+  	"asiago": 1
   };
   console.log('cheese loaded');
 
