@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Sandwich Maker</title>
+</head>
+<body>
+	<h1>Pick Yo' Stuff!</h1>
+	<form>
+		<section id="bread-chooser">
+			<input type=checkbox name="bread" value="herbs" id="herbs">
+			<label for="herbs">Italian Herbs &amp; Cheese</label><br>
+
+			<input type=checkbox name="bread" value="white" id="white">
+			<label for="white">White</label><br>
+
+			<input type=checkbox name="bread" value="wheat" id="wheat">
+			<label for="wheat">Wheat</label><br>
+		</section>
+		<br>
+
+		<section id="meat-chooser">
+			<input type=checkbox name="meat" value="ham" id="ham">
+			<label for="ham">Ham</label><br>
+
+			<input type=checkbox name="meat" value="turkey" id="turkey">
+			<label for="turkey">Turkey</label><br>
+
+			<input type=checkbox name="meat" value="beef" id="roast-beef">
+			<label for="roast-beef">Roast Beef</label><br>
+
+			<input type=checkbox name="meat" value="bacon" id="bacon">
+			<label for="bacon">Bacon</label><br>
+		</section>
+		<br>
+
+		<section id="cheese-chooser">
+			<input type=checkbox name="cheese" value="american" id="american">
+			<label for="american">American</label><br>
+
+			<input type=checkbox name="cheese" value="swiss" id="swiss">
+			<label for="swiss">Swiss</label><br>
+
+			<input type=checkbox name="cheese" value="provolone" id="provolone">
+			<label for="provolone">Provolone</label><br>
+
+			<input type=checkbox name="cheese" value="cheddar" id="cheddar">
+			<label for="cheddar">Cheddar</label><br>
+
+			<input type=checkbox name="cheese" value="asiago" id="asiago">
+			<label for="asiago">Asiago</label><br>
+		</section>
+		<br>
+
+		<section id="condiments-chooser">
+			<input type=checkbox name="condiments" value="mayo" id="mayo">
+			<label for="mayo">Mayonnaise</label><br>
+
+			<input type=checkbox name="condiments" value="mustard" id="mustard">
+			<label for="mustard">Mustard</label><br>
+
+			<input type=checkbox name="condiments" value="bbq" id="bbq">
+			<label for="bbq">BBQ Sauce</label><br>
+
+			<input type=checkbox name="condiments" value="sriracha" id="sriracha">
+			<label for="sriracha">Sriracha</label><br>
+		</section>
+		<br>
+
+		<section id="veggies-chooser">
+			<input type=checkbox name="veggies" value="lettuce" id="lettuce">
+			<label for="lettuce">Lettuce</label><br>
+
+			<input type=checkbox name="veggies" value="spinach" id="spinach">
+			<label for="spinach">Spinach</label><br>
+
+			<input type=checkbox name="veggies" value="pickles" id="pickles">
+			<label for="pickles">Pickles</label><br>
+
+			<input type=checkbox name="veggies" value="onions" id="onions">
+			<label for="onions">Onions</label><br>
+
+			<input type=checkbox name="veggies" value="tomatoes" id="tomatoes">
+			<label for="tomatoes">Tomatoes</label><br>
+
+			<input type=checkbox name="veggies" value="bellPep" id="bellPep">
+			<label for="bellPep">Bell Peppers</label><br>
+
+			<input type=checkbox name="veggies" value="banPep" id="banPep">
+			<label for="banPep">Banana Peppers</label><br>
+
+			<input type=checkbox name="veggies" value="olives" id="olives">
+			<label for="olives">Olives</label><br>
+		</section>
+		<br><br>
+
+		<button id="btn">Place Yo' Order!</button>
+	</form>
+
+	<h3 id="finished-order"></h3>
+
+	<script type="text/javascript" src="javascripts/SandwichMaker.js"></script>
+	<script type="text/javascript" src="javascripts/bread.js"></script>
+	<script type="text/javascript" src="javascripts/meat.js"></script>
+	<script type="text/javascript" src="javascripts/cheese.js"></script>
+	<script type="text/javascript" src="javascripts/condiments.js"></script>
+	<script type="text/javascript" src="javascripts/veggies.js"></script>
+	<script type="text/javascript" src="javascripts/DOMHandler.js"></script>
+</body>
+</html>
